@@ -1,9 +1,10 @@
-import operator from './OperatorButton';
-import NumberButton from './NumberButton';
+interface Props {
+  onClick: () => void;
+}
 
-const EqualButton = () => {
+const EqualButton = ({ onClick }: Props) => {
   return (
-    <button type='button' className='btn btn-primary' onClick={() => {}}>
+    <button type='button' className='btn btn-primary' onClick={onClick}>
       =
     </button>
   );

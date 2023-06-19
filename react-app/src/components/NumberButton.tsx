@@ -1,15 +1,11 @@
-import { useState } from 'react';
-
 interface Props {
   number: number;
+  onClick: (number: number) => void;
 }
 
-const NumberButton = ({ number }: Props) => {
-  const [selectedNumber, setSelectedNumber] = useState(number);
-
+const NumberButton = ({ number, onClick }: Props) => {
   const handleClick = () => {
-    setSelectedNumber(number);
-    console.log(selectedNumber);
+    onClick(number);
   };
 
   return (

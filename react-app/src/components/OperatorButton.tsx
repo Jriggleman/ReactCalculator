@@ -1,15 +1,11 @@
-import { useState } from 'react';
-
 interface Props {
   operator: string;
+  onClick: (operator: string) => void;
 }
 
-const OperatorButton = ({ operator }: Props) => {
-  const [selectedOperator, setSelectedOperator] = useState(operator);
-
+const OperatorButton = ({ onClick, operator }: Props) => {
   const handleClick = () => {
-    setSelectedOperator(operator);
-    console.log(selectedOperator);
+    onClick(operator);
   };
 
   return (
