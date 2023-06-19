@@ -9,7 +9,7 @@ const OperatorButton = ({ onClick, operator }: Props) => {
   };
 
   return (
-    <button type='button' className='btn btn-primary' onClick={handleClick}>
+    <button type='button' className='btn btn-secondary' onClick={handleClick}>
       {operator}
     </button>
   );
